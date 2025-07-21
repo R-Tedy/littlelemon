@@ -1,0 +1,18 @@
+<!-- no need to put the boiler-plate html doc structure instead we just extend this file since it will be added to an already existing html file. -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- anything within this section will be extended to the base.html file -->
+ <h1>Menu</h1>
+ <div class="column">
+    {% for item in menu  %}
+    <p>
+      {{item.name}}
+      <span class="menu-price">
+        {{item.price}}.00
+      </span>
+    </p>
+    {% endfor %}
+ </div>
+{% endblock %}
